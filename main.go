@@ -20,13 +20,8 @@ var rootCmd = &cobra.Command{
 	Short: "A cmd runner for ai",
 	Long:  `Run script which generate by AI`,
 	Run: func(cmd *cobra.Command, args []string) {
-		log.Sugar().Debug("log level: %s", viper.GetString("log.level"))
-
-		log.Debug("This is a debug message")
-		log.Warn("This is a warning")
-		log.Error("This is an error")
-
-		log.Info("Application finished")
+		var runner = NewRunner()
+		runner.Start()
 	},
 }
 

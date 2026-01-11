@@ -1,0 +1,7 @@
+server:
+  addr: localhost
+  port: 8080
+
+log:
+  level: debug
+  format: json
